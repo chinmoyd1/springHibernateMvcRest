@@ -22,7 +22,7 @@ public class EmployeeDAO implements Dao<Employee> {
     }
 
     @Override
-    public Optional<Employee> get(long id) {
+    public Employee get(int id) {
         Session session = factory.openSession();
         Transaction tx = null;
         Employee employee = null;
@@ -37,7 +37,7 @@ public class EmployeeDAO implements Dao<Employee> {
         } finally {
             session.close();
         }
-        return Optional.ofNullable(employee);
+        return employee;
     }
 
     @Override

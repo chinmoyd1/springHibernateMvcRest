@@ -1,10 +1,13 @@
 package com.spring.hibernate.service;
 
+import com.spring.hibernate.model.Employee;
 import com.spring.hibernate.model.EmployeeList;
 import com.spring.hibernate.repository.EmployeeDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 
 @Service
@@ -19,6 +22,10 @@ public class ManageEmployeeImpl {
         EmployeeList employeeList = new EmployeeList();
         employeeList.setEmployeeList(dao.getAll());
         return employeeList;
+    }
+
+    public Employee getEmployee(int id){
+        return dao.get(id);
     }
 
 }
