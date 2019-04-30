@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
 
 
 @Service
@@ -26,6 +25,18 @@ public class ManageEmployeeImpl {
 
     public Employee getEmployee(int id){
         return dao.get(id);
+    }
+
+    public void updateEmployee(Employee employee){
+        dao.update(employee);
+    }
+
+    public void createEmployee(Employee employee){
+        dao.save(employee);
+    }
+
+    public void deleteEmployee(Employee employee){
+        dao.delete(employee);
     }
 
 }
