@@ -1,6 +1,5 @@
 package com.spring.hibernate.controller;
 
-
 import com.spring.hibernate.model.Employee;
 import com.spring.hibernate.model.EmployeeList;
 import com.spring.hibernate.service.ManageEmployeeImpl;
@@ -11,8 +10,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-
 
 @RestController
 @RequestMapping("/employee")
